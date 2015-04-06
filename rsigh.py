@@ -270,7 +270,7 @@ def postproc(sqlite, args, input):
 		return False
 
 	if os.path.isfile(os.path.join(input, res[0][2] + '.par2')):
-		par2 = PAR2(filename=os.path.join(input, res[0][2] + '.par2', binary=args['par2_bin']))
+		par2 = PAR2(filename=os.path.join(input, res[0][2] + '.par2'), binary=args['par2_bin'])
 		if par2.verify() == False:
 			if par2.repair() == False:
 				sys.exit(1)
